@@ -9,14 +9,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import jakarta.transaction.Transactional;
+import jakarta.validation.Valid;
+
 @RestController
+@Transactional
 @RequestMapping("/lead")
 public class LeadController {
     @Autowired  //injeção de dependência
     private LeadRepository repository;
     
     @PostMapping
-    public String criarLead(@RequestBody DadosCadastroLead dados) {
+    public String criarLead(@RequestBody @Valid DadosCadastroLead dados) {
         // Implementação do método para criar um lead
         System.out.println("Lead criado com os dados: " + dados);
         //null - persistence

@@ -25,7 +25,7 @@ public class LeadController {
         System.out.println("Lead criado com os dados: " + dados);
         //null - persistence
         //sem null - merge
-        repository.save(new Lead(null,dados.nome(),dados.email(),dados.telefone()));
+        repository.save(new Lead(null,dados.nome(),dados.email(),dados.telefone(),dados.cpf()));
         return "Lead criado com sucesso!"; 
     }
     @GetMapping

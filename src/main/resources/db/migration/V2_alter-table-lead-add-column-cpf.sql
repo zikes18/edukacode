@@ -1,0 +1,1 @@
+ALTER TABLE tblead ADD cpf VARCHAR(20) NOT NULL;

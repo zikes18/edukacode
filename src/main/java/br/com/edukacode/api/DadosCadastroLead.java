@@ -15,4 +15,8 @@ String email,
 
 @NotBlank
 @Pattern(regexp = "\\d{11,12}")
-String telefone) {}
+String telefone,
+
+@NotBlank
+@Pattern(regexp = "\\d{11}")
+String cpf) {}

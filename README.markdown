@@ -15,7 +15,7 @@ Esta API foi construída com tecnologias modernas e robustas, garantindo escalab
 | **JPA**    | Especificação para mapeamento objeto-relacional | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="20" height="20"/> |
 | **Hibernate** | Implementação do JPA para persistência de dados | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/hibernate/hibernate-original.svg" width="20" height="20"/> |
 | **MySQL**  | Banco de dados relacional | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" width="20" height="20"/> |
-| **Flyway** | Gerenciamento de migrações de banco de dados | <img src="https://flywaydb.org/assets/logo/flyway-logo.png" width="20" height="20"/> |
+| **Flyway** | Gerenciamento de migrações de banco de dados | <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Flyway_logo.svg" width="20" height="20"/> |
 
 ---
 

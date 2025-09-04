@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.edukacode.api.dto.DadosAtualizacaoGenero;
+import br.com.edukacode.api.dto.DadosAtualizacaoLead;
 import br.com.edukacode.api.dto.DadosCadastroGenero;
 import br.com.edukacode.api.dto.DadosListagemGenero;
 import br.com.edukacode.api.entities.Genero;
@@ -40,8 +42,10 @@ public class GeneroController {
     }
 
      @PutMapping
-    public void atualizarLead() {
-        // Implementação do método para atualizar um lead existente
+    public String atualizarLead(@RequestBody DadosAtualizacaoGenero dados) {
+        var lead = repository.getReferenceById(dados.id());
+        lead.atualizarGen(dados);
+        return "Gênero atualizado com sucesso!";
     }
 
     @DeleteMapping

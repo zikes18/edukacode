@@ -1,5 +1,6 @@
 package br.com.edukacode.api.entities;
 
+import br.com.edukacode.api.dto.DadosAtualizacaoLead;
 import br.com.edukacode.api.dto.DadosCadastroLead;
 import jakarta.persistence.*;
 import lombok.*;
@@ -24,5 +25,20 @@ public class Lead {
         this.email = dados.email();
         this.telefone = dados.telefone();
         this.cpf = dados.cpf();
+    }
+
+    public void atualizarInformacoes(DadosAtualizacaoLead dados){
+        if (dados.nome() !=null) {
+            this.nome = dados.nome();
+        }
+        if (dados.telefone() !=null) {
+            this.telefone = dados.telefone();
+        }
+        if (dados.email() !=null) {
+            this.email = dados.email();
+        }
+        if (dados.cpf() !=null) {
+            this.cpf = dados.cpf();
+        }
     }
 }

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.edukacode.api.dto.DadosAtualizacaoLead;
 import br.com.edukacode.api.dto.DadosCadastroLead;
 import br.com.edukacode.api.dto.DadosListagemLead;
 import br.com.edukacode.api.entities.Lead;
@@ -43,8 +44,10 @@ public class LeadController {
         return repository.findAll(paginacao).map(DadosListagemLead::new);
     }
     @PutMapping
-    public void atualizarLead() {
+    public void atualizarLead(@RequestBody DadosAtualizacaoLead dados) {
         // Implementação do método para atualizar um lead existente
+        var lead = repository.getReferenceById(dados.id());
+        lead.atualizarInformacoes(dados);
     }
     @DeleteMapping
     public void excluirLead() {

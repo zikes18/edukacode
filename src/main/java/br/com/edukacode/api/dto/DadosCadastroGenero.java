@@ -1,4 +1,4 @@
-package br.com.edukacode.api;
+package br.com.edukacode.api.dto;
 
 import jakarta.validation.constraints.NotBlank;
 

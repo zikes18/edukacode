@@ -1,4 +1,4 @@
-package br.com.edukacode.api;
+package br.com.edukacode.api.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

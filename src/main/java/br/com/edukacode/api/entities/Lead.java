@@ -1,5 +1,6 @@
-package br.com.edukacode.api;
+package br.com.edukacode.api.entities;
 
+import br.com.edukacode.api.dto.DadosCadastroLead;
 import jakarta.persistence.*;
 import lombok.*;
 

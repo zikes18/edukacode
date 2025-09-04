@@ -1,4 +1,6 @@
-package br.com.edukacode.api;
+package br.com.edukacode.api.dto;
+
+import br.com.edukacode.api.entities.Lead;
 
 public record DadosListagemLead(
     String nome,

@@ -3,6 +3,7 @@ package br.com.edukacode.api.dto;
 import br.com.edukacode.api.entities.Personagem;
 
 public record DadosListagemPersonagem(
+    Long id,
     String nome,
     String arquetipo,
     String historia,
@@ -11,7 +12,7 @@ public record DadosListagemPersonagem(
     String aparencia
 ) {
     public DadosListagemPersonagem(Personagem lead){
-        this(lead.getNome(), lead.getArquetipo(), lead.getHistoria(), lead.getPersonalidade(), lead.getMotivacoes(), lead.getAparencia());
+        this(lead.getId(),lead.getNome(), lead.getArquetipo(), lead.getHistoria(), lead.getPersonalidade(), lead.getMotivacoes(), lead.getAparencia());
     }
     
 }

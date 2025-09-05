@@ -1,5 +1,6 @@
 package br.com.edukacode.api.entities;
 
+import br.com.edukacode.api.dto.DadosAtualizacaoPersonagem;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -21,4 +22,25 @@ public class Personagem {
     @Column(columnDefinition = "TEXT")
     private String aparencia;
 
+
+    public void atualizarInformacoes(DadosAtualizacaoPersonagem dados){
+        if (dados.nome() !=null) {
+            this.nome = dados.nome();
+        }
+        if (dados.arquetipo() !=null) {
+            this.arquetipo = dados.arquetipo();
+        }
+        if (dados.historia() !=null) {
+            this.historia = dados.historia();
+        }
+        if (dados.personalidade() !=null) {
+            this.personalidade = dados.personalidade();
+        }
+        if (dados.motivacoes() !=null) {
+            this.motivacoes = dados.motivacoes();
+        }
+        if (dados.aparencia() !=null) {
+            this.aparencia = dados.aparencia();
+        }
+    }
 }

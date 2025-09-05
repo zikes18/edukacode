@@ -6,6 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.edukacode.api.dto.DadosAtualizacaoGenero;
-import br.com.edukacode.api.dto.DadosAtualizacaoLead;
 import br.com.edukacode.api.dto.DadosCadastroGenero;
 import br.com.edukacode.api.dto.DadosListagemGenero;
 import br.com.edukacode.api.entities.Genero;
@@ -42,15 +42,16 @@ public class GeneroController {
     }
 
      @PutMapping
-    public String atualizarLead(@RequestBody DadosAtualizacaoGenero dados) {
+    public String atualizarGenero(@RequestBody DadosAtualizacaoGenero dados) {
         var lead = repository.getReferenceById(dados.id());
         lead.atualizarGen(dados);
         return "Gênero atualizado com sucesso!";
     }
 
-    @DeleteMapping
-    public void excluirLead() {
+    @DeleteMapping("/{id}")
+    public void excluirGenero(@PathVariable Long id) {
         // Implementação do método para excluir um lead
+        repository.deleteById(id);
     }
 
 }
